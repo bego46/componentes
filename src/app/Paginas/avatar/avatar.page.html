@@ -1,0 +1,47 @@
+
+<!-- ENCABEZADO -->
+
+<!-- <app-header [titulo]="title"></app-header> -->
+
+<ion-header mode="ios">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title> {{title}} </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <img src="/assets/img/one-piece.jpg">
+      </ion-avatar>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<!-- CONTENIDO -->
+
+<ion-content>
+
+  <ion-chip color="primary" *ngFor="let i of anime">
+    <ion-avatar >
+      <img [src]="i.src">
+    </ion-avatar>
+
+    <ion-label>{{ i.name}}</ion-label>
+
+  </ion-chip>
+  
+  <ion-list>
+    <ion-item *ngFor="let i of anime" >
+      <ion-avatar slot="start">
+        <img [src]="i.src">
+      </ion-avatar>
+  
+      <ion-label>{{ i.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

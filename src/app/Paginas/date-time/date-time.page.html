@@ -1,0 +1,55 @@
+<app-header titulo="Date Time"></app-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-list-header>
+      <ion-label>Datos de fecha</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Fecha</ion-label>
+      <ion-datetime placeHolder="Fecha"
+                    display-format="DD MMMM YYYY"
+                    cancelText="Cancelar!!"
+                    [ngModel]="fecha.toISOString()"
+                    (ionChange)="cambioFecha( $event )">
+      </ion-datetime>
+    </ion-item>
+
+    
+    <ion-list-header>
+      <ion-label>Restrincciones</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Min y Max</ion-label>
+      <ion-datetime placeholder="YY / MM / DD"
+                    display-format="YYYY MMMM DD"
+                    min="2010-01-01"
+                    max="2010-12-31">
+
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Años</ion-label>
+      <ion-datetime placeholder="YYYY"
+                    display-format="YYYY"
+                    min="1980"
+                    max="2030">
+
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Custon Date</ion-label>
+      <ion-datetime [pickerOptions]="customPickerOptions"
+                    [(ngModel)]="customDate">
+
+      </ion-datetime>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
