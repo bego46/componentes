@@ -51,6 +51,54 @@ const routes: Routes = [
     path: 'infinite-scroll',
     loadChildren: () => import('./Paginas/infinite-scroll/infinite-scroll.module').then( m => m.InfiniteScrollPageModule)
   },
+  {
+    path: 'input',
+    loadChildren: () => import('./Paginas/input/input.module').then( m => m.InputPageModule)
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('./Paginas/list/list.module').then( m => m.ListPageModule)
+  },
+  {
+    path: 'list-reorder',
+    loadChildren: () => import('./Paginas/list-reorder/list-reorder.module').then( m => m.ListReorderPageModule)
+  },
+  {
+    path: 'loading',
+    loadChildren: () => import('./Paginas/loading/loading.module').then( m => m.LoadingPageModule)
+  },
+  {
+    path: 'modal',
+    loadChildren: () => import('./Paginas/modal/modal.module').then( m => m.ModalPageModule)
+  },
+  {
+    path: 'popover',
+    loadChildren: () => import('./Paginas/popover/popover.module').then( m => m.PopoverPageModule)
+  },
+  {
+    path: 'progress-bar',
+    loadChildren: () => import('./Paginas/progress-bar/progress-bar.module').then( m => m.ProgressBarPageModule)
+  },
+  {
+    path: 'refresher',
+    loadChildren: () => import('./Paginas/refresher/refresher.module').then( m => m.RefresherPageModule)
+  },
+  {
+    path: 'searchbar',
+    loadChildren: () => import('./Paginas/searchbar/searchbar.module').then( m => m.SearchbarPageModule)
+  },
+  {
+    path: 'segment',
+    loadChildren: () => import('./Paginas/segment/segment.module').then( m => m.SegmentPageModule)
+  },
+  {
+    path: 'slides',
+    loadChildren: () => import('./Paginas/slides/slides.module').then( m => m.SlidesPageModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./Paginas/tabs/tabs.module').then( m => m.TabsPageModule)
+  }
 ];
 
 @NgModule({
